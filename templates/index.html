@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock title %}
+
+
+
+{% block content %}
+
+
+
+    <!-- This is an example component -->
+<div>
+    <section class=" text-gray-200 bg-gray-900">
+      <div class="max-w-6xl mx-auto px-5 py-24 ">
+        <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+          <h1 class=" title-font mb-2 text-4xl font-extrabold leading-10 tracking-tight text-left sm:text-5xl sm:leading-none md:text-6xl"> FRIENDS LIST</h1>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          
+
+          {% for item in list_name %}
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="border border-gray-300 p-6 rounded-lg">
+              <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4 italic">
+                <span class="font-bold text-sm ">
+                  
+                </span>
+              </div>
+              <h2 class="text-lg  font-medium title-font mb-2">{{item['first_name'] + ' ' + item['last_name']}}</h2>
+            </div>
+          </div>
+          {% endfor %}
+          
+          
+        </div>
+      </div>
+    </section>
+
+</div>
+{% endblock content %}
